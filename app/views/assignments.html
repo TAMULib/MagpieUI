@@ -15,6 +15,7 @@
                         <tr ng-repeat="doc in $data">
                             <td data-title="'Filename'" sortable="'name'">
                                 {{doc.name}}
+                                <span ng-if="doc.deleted" class="glyphicon glyphicon-trash" title="This document has been removed from the file system"></span>
                             </td>
                             <td data-title="'Status'" sortable="'status'" class="text-center">
                                 {{doc.status}}

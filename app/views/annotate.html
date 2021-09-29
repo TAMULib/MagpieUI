@@ -3,6 +3,10 @@
 
     <!-- ADMINS, MANAGERS AND ANNOTATORS ONLY -->
     <div ng-if="isUser()" class="row" ng-include src="'views/restrictedAccess.html'" ></div>
+    <div ng-if="document.deleted" class="panel panel-warning">
+        <div class="panel-heading">Deleted</div>
+        <div class="panel-body">This document has been removed from the file system</div>
+    </div>
     <div ng-if="document.publishedLocations.length > 0" class="panel panel-success">
         <div class="panel-heading">This document is published at:</div>
         <div class="panel-body">
