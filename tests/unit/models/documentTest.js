@@ -1,9 +1,12 @@
 describe("model: ControlledVocabulary", function () {
-  var $rootScope, $scope, ProjectRepo, WsApi, model;
+  var $q, $rootScope, $scope, ProjectRepo, WsApi, model;
 
   var initializeVariables = function (settings) {
-    inject(function (_$rootScope_, _ProjectRepo_, _WsApi_) {
+    inject(function (_$q_, _$rootScope_, _ProjectRepo_, _WsApi_) {
+      $q = _$q_;
       $rootScope = _$rootScope_;
+
+      MockedUser = new mockUser($q);
 
       ProjectRepo = _ProjectRepo_;
       WsApi = _WsApi_;
@@ -22,10 +25,22 @@ describe("model: ControlledVocabulary", function () {
     module("core");
     module("metadataTool");
     module("mock.projectRepo");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("mock.wsApi");
+    module("templates");
 
     initializeVariables();
     initializeModel();
+  });
+  
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the model", function () {

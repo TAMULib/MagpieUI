@@ -7,6 +7,7 @@ describe("service: userRepo", function () {
       $rootScope = _$rootScope_;
 
       MockedUser = new mockUser($q);
+
       WsApi = _WsApi_;
     });
   };
@@ -28,10 +29,16 @@ describe("service: userRepo", function () {
       };
       $provide.value("User", User);
     });
+    module("mock.userService");
     module("mock.wsApi");
+    module("templates");
 
     initializeVariables();
     initializeRepo();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the repo", function () {

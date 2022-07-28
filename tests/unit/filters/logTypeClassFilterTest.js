@@ -15,10 +15,15 @@ describe("filter: logTypeClass", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module("templates");
 
     installPromiseMatchers();
     initializeVariables();
     initializeFilter();
+  });
+  
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the filter", function () {

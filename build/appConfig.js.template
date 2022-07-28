@@ -8,14 +8,14 @@ var appConfig = {
 
     // Set this to the webService if mocking AuthService
 
-    'authService': 'https://labs.library.tamu.edu/authfix',
-    'webService': 'http://localhost:9000',
-    'iiifService': 'http://localhost:9003',
+    'authService': '${AUTH_SERVICE_URL}',
+    'webService': '${WEB_SERVICE_URL}',
+    'iiifService': '${IIIF_SERVICE_URL}',
 
     // If cantaloupeService is null, a simple image viewer will be used instead of the OpenSeaDragon viewer.
-    'cantaloupeService': 'http://localhost:8182/iiif/2/',
+    'cantaloupeService': '${CANTALOUPE_SERVICE_URL}',
 
-    'basePath': '/magpie',
+    'basePath': '${BASE_PATH}',
 
     'storageType': 'session',
 
@@ -27,7 +27,7 @@ var appConfig = {
       'debug': true
     },
 
-    'stompDebug': false,
+    'stompDebug': ${STOMP_DEBUG},
 
     /*
     Determines the type of connection stomp will attempt to make with the service.

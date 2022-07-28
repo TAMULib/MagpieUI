@@ -1,10 +1,12 @@
 describe("directive: contentTabs", function () {
-  var $compile, $q, $scope, directive, element;
+  var $compile, $q, $scope, MockedUser, directive, element;
 
   var initializeVariables = function () {
     inject(function (_$q_, _$compile_) {
       $q = _$q_;
       $compile = _$compile_;
+
+      MockedUser = new mockUser($q);
     });
   };
 
@@ -30,10 +32,21 @@ describe("directive: contentTabs", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("templates");
 
     installPromiseMatchers();
     initializeVariables();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the directive", function () {

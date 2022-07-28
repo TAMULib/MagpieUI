@@ -6,6 +6,8 @@ describe("model: MetadataRepo", function () {
       $q = _$q_;
       $rootScope = _$rootScope_;
 
+      MockedUser = new mockUser($q);
+
       Metadata = _Metadata_;
       WsApi = _WsApi_;
     });
@@ -22,10 +24,23 @@ describe("model: MetadataRepo", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("mock.wsApi");
+    module("templates");
 
+    installPromiseMatchers();
     initializeVariables();
     initializeRepo();
+  });
+  
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the repo", function () {
