@@ -77,8 +77,12 @@ ENV BASE_PATH /magpie
 ENV GOOGLE_ANALYTICS UA-XXXXX-X
 
 ENV AUTH_SERVICE_URL http://localhost:9001/auth
-ENV WEB_SERVICE_URL http://localhost:9001
+ENV WEB_SERVICE_URL http://localhost:9000
 ENV COMPONENTS_URL https://labs.library.tamu.edu/tl-components/2x
+ENV IIIF_SERVICE_URL http://localhost:9003
+
+# If cantaloupeService is null, a simple image viewer will be used instead of the OpenSeaDragon viewer.
+ENV CANTALOUPE_SERVICE_URL http://localhost:8182/iiif/2/
 
 EXPOSE 80
 
