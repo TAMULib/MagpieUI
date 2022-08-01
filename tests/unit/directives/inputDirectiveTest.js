@@ -1,5 +1,5 @@
 describe("directive: inputDirective", function () {
-  var $compile, $q, $scope, directive, element, field;
+  var $compile, $q, $scope, MockedUser, directive, element, field;
 
   var initializeVariables = function () {
     inject(function (_$q_, _$compile_) {
@@ -9,6 +9,7 @@ describe("directive: inputDirective", function () {
       field = new mockMetadataFieldLabel($q);
       field.label = new mockMetadataFieldLabel($q);
       field.value = new mockMetadataFieldValue($q);
+      MockedUser = new mockUser($q);
     });
   };
 
@@ -32,10 +33,21 @@ describe("directive: inputDirective", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("templates");
 
     installPromiseMatchers();
     initializeVariables();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the directive", function () {

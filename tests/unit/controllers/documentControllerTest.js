@@ -64,6 +64,7 @@ describe("controller: DocumentController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.alertService");
     module("mock.document", function ($provide) {
       var Document = function () {
@@ -95,6 +96,10 @@ describe("controller: DocumentController", function () {
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {

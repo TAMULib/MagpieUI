@@ -41,6 +41,11 @@ var mockUser = function ($q) {
     return payloadPromise(model.authDefer);
   };
 
+  model.getMapping = function () {
+    return {
+    };
+  };
+
   model.logout = function () {
     model.anonymous = true;
     model.authDefer = $q.defer();

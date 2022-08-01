@@ -42,6 +42,7 @@ describe("controller: AdminController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.assumedControl");
     module("mock.authService");
     module("mock.modalService");
@@ -59,6 +60,10 @@ describe("controller: AdminController", function () {
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {

@@ -41,6 +41,7 @@ describe("controller: ProjectAuthorityController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.modalService");
     module("mock.projectRepo");
     module("mock.projectAuthority");
@@ -59,6 +60,10 @@ describe("controller: ProjectAuthorityController", function () {
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {

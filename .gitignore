@@ -1,7 +1,5 @@
 logs/*
 !.gitkeep
-.coveralls.yml
-coverage
 dist
 node_modules
 bower_components
@@ -12,9 +10,8 @@ tmp
 .idea
 npm-debug.log
 .sass-cache
-app/resources/styles/*
-!app/resources/styles/sass
-app/resources/scripts/*
-!app/resources/scripts/vendor
-app/node_modules
-*.log
+coverage
+
+package-lock.json
+
+.npmrc

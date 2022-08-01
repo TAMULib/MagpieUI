@@ -1,9 +1,11 @@
 describe("controller: ExportController", function () {
-  var $q, $scope, ProjectRepo, WsApi, controller;
+  var $q, $scope, MockedUser, ProjectRepo, WsApi, controller;
 
   var initializeVariables = function () {
     inject(function (_$q_, _ProjectRepo_, _WsApi_) {
       $q = _$q_;
+
+      MockedUser = new mockUser($q);
 
       ProjectRepo = _ProjectRepo_;
       WsApi = _WsApi_;
@@ -39,17 +41,29 @@ describe("controller: ExportController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.alertService");
     module("mock.metadataRepo");
     module("mock.modalService");
     module("mock.projectRepo");
     module("mock.restApi");
     module("mock.storageService");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("mock.wsApi");
 
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {

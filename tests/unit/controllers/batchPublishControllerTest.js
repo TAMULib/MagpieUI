@@ -1,9 +1,11 @@
 describe("controller: BatchPublishController", function () {
-  var $q, $scope, WsApi, controller;
+  var $q, $scope, MockedUser, WsApi, controller;
 
   var initializeVariables = function () {
     inject(function (_$q_, _WsApi_) {
       $q = _$q_;
+
+      MockedUser = new mockUser($q);
 
       WsApi = _WsApi_;
     });
@@ -37,6 +39,7 @@ describe("controller: BatchPublishController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.alertService");
     module("mock.document");
     module("mock.modalService");
@@ -44,11 +47,22 @@ describe("controller: BatchPublishController", function () {
     module("mock.projectRepo");
     module("mock.restApi");
     module("mock.storageService");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("mock.wsApi");
 
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {
