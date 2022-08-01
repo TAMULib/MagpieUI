@@ -41,8 +41,8 @@ const config = {
           .replace('${STOMP_DEBUG}', 'false')
           .replace('${AUTH_SERVICE_URL}', 'https://labs.library.tamu.edu/authfix')
           .replace('${WEB_SERVICE_URL}', 'http://localhost:9000')
-          .replace('${IIIF_SERVICE_URL}', 'http://localhost:9003')
-          .replace('${CANTALOUPE_SERVICE_URL}', 'http://localhost:8182/iiif/2/')
+          .replace('${IIIF_SERVICE_URL}', 'http://api-dev.library.tamu.edu/iiif-service')
+          .replace('${CANTALOUPE_SERVICE_URL}', 'http://api-dev.library.tamu.edu/iiif/2')
           .replace('${BASE_PATH}', '/magpie');
       },
     },
