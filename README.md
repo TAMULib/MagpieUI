@@ -60,7 +60,7 @@ Any questions concerning Scanned Document Metadata Assignment Tool UI can be dir
 [coverage-badge]: https://coveralls.io/repos/github/TAMULib/MagpieUI/badge.svg
 [tamu-library]: http://library.tamu.edu
 [app-repo]: https://github.com/TAMULib/Magpie
-[deployment-guide]: https://github.com/TAMULib/MagpieUI/main/blob/main/DEPLOYING.md
-[contributors-docs]: https://github.com/TAMULib/MagpieUI/blob/main/CONTRIBUTING.md
+[deployment-guide]: DEPLOYING.md
+[contributors-docs]: CONTRIBUTING.md
 [helpdesk-email]: mailto:helpdesk@library.tamu.edu
 [dspace-url]: https://dspace.lyrasis.org/
