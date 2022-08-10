@@ -37,7 +37,7 @@ Annotate abstract and committee member metadata of documents.
 
 For a quick and easy deployment using `docker-compose` consider using the [Scanned Document Metadata Assignment Tool App][app-repo].
 
-For _advanced use cases_, or when `docker-compose` is unavailable, the UI may be either started using `docker` directrly or even manually started.
+For _advanced use cases_, or when `docker-compose` is unavailable, the UI may be either started using `docker` directly or even manually started.
 This process is further described in the [Deployment Guide][deployment-guide].
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
