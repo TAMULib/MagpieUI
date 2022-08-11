@@ -1,25 +1,23 @@
 <a name="readme-top"></a>
-# Contributing To Scanned Document Metadata Assignment Tool UI
+# Contributing To Metadata Assignment GUI Providing Ingest and Export UI
 
-Though Scanned Document Metadata Assignment Tool UI is developed and maintained by Texas A&M University Libraries, we welcome community contributions.
-Involvement in Scanned Document Metadata Assignment Tool UI can take many forms:
+Though *Metadata Assignment GUI Providing Ingest and Export (MAGPIE) UI* is developed and maintained by Texas A&M University Libraries, we welcome community contributions.
+Involvement in *MAGPIE UI* can take many forms:
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 
 ## Using
 
-Deploying Scanned Document Metadata Assignment Tool UI and trying it out at your own institution is itself a way of contributing to the development process.
+Deploying *MAGPIE UI* and trying it out at your own institution is itself a way of contributing to the development process.
 For more information on deployment strategies please see the [Deployment Guide][deployment-guide].
-
-[deployment-guide]: DEPLOYING.md
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 
 ## Filing Issues
 
-Once you are using Scanned Document Metadata Assignment Tool UI the creation of new issues through GitHub is a major method of contribution towards Scanned Document Metadata Assignment Tool UI development.
+Once you are using *MAGPIE UI* the creation of new issues through GitHub is a major method of contribution towards *MAGPIE UI* development.
 Issues can be motivated by the discovery of a bug in the software, or by the desire to see either new features added or see changes to existing features.
 
 There are two primary types of issues:
@@ -36,7 +34,7 @@ A **Feature** involves new functionality or behavior.
 ## Creating a Pull Request
 
 Community code and documentation contributions are welcome and should take the form of a **GitHub Pull Request** (*PR*).
-Each *PR* will need to be reviewed by a Scanned Document Metadata Assignment Tool UI developer.
+Each *PR* will need to be reviewed by a *MAGPIE UI* developer.
 A review will result in the *PR* being accepted and merged, a descriptive request for changes, or the *PR* being closed along with a detailed explanation.
 
 It is our intention to maintain labeling on issues that are deemed to be low difficulty in order to provide a good point of entry for those looking to begin contributing code or documentation.
@@ -57,7 +55,7 @@ In general keep in mind:
 ## Good Luck!
 
 We look forward to seeing your contributions.
-If you have any additional questions please contact the Scanned Document Metadata Assignment Tool UI developers at helpdesk@library.tamu.edu.
+If you have any additional questions please contact the *MAGPIE UI* developers at helpdesk@library.tamu.edu.
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
