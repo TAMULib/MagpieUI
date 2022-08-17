@@ -2,7 +2,7 @@
 # Contributing to Metadata Assignment GUI Providing Ingest and Export UI
 
 Though *Metadata Assignment GUI Providing Ingest and Export (MAGPIE) UI* is developed and maintained by Texas A&M University Libraries, we welcome community contributions.
-Involvement in *MAGPIE UI* can take many forms:
+Involvement in *MAGPIE UI* can take many forms.
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
