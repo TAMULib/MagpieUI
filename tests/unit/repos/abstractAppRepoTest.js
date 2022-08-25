@@ -6,6 +6,8 @@ describe("service: abstractAppRepo", function () {
       $q = _$q_;
       $rootScope = _$rootScope_;
 
+      MockedUser = new mockUser($q);
+
       WsApi = _WsApi_;
     });
   };
@@ -26,10 +28,22 @@ describe("service: abstractAppRepo", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module("mock.user", function ($provide) {
+      var User = function () {
+        return MockedUser;
+      };
+      $provide.value("User", User);
+    });
+    module("mock.userService");
     module("mock.wsApi");
+    module("templates");
 
     initializeVariables();
     initializeRepo();
+  });
+  
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the repo", function () {

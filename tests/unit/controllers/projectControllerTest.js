@@ -45,6 +45,7 @@ describe("controller: ProjectController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.alert");
     module("mock.metadataRepo");
     module("mock.modalService");
@@ -66,6 +67,10 @@ describe("controller: ProjectController", function () {
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {

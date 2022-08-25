@@ -70,6 +70,7 @@ describe("controller: AnnotateController", function () {
   beforeEach(function () {
     module("core");
     module("metadataTool");
+    module('templates');
     module("mock.alertService");
     module("mock.controlledVocabularyRepo");
     module("mock.document");
@@ -94,6 +95,10 @@ describe("controller: AnnotateController", function () {
     installPromiseMatchers();
     initializeVariables();
     initializeController();
+  });
+
+  afterEach(function () {
+    $scope.$destroy();
   });
 
   describe("Is the controller", function () {
