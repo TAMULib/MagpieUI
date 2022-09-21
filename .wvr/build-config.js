@@ -61,12 +61,20 @@ const config = {
       to: './views'
     },
     {
-      from: './node_modules/ng-table/bundles/ng-table.css',
-      to: './resources/styles/ng-table/bundles/ng-table.css',
+      from: './node_modules/ng-table/bundles/ng-table.min.css',
+      to: './resources/styles/ng-table/bundles/ng-table.min.css',
     },
     {
-      from: './node_modules/bootstrap/dist/css/bootstrap.css',
-      to: './resources/styles/bootstrap/dist/css/bootstrap.css',
+      from: './node_modules/ng-table/bundles/ng-table.min.css.map',
+      to: './resources/styles/ng-table/bundles/ng-table.min.css.map',
+    },
+    {
+      from: './node_modules/bootstrap/dist/css/bootstrap.min.css',
+      to: './resources/styles/bootstrap/dist/css/bootstrap.min.css',
+    },
+    {
+      from: './node_modules/bootstrap/dist/css/bootstrap.min.css.map',
+      to: './resources/styles/bootstrap/dist/css/bootstrap.min.css.map',
     },
   ],
   entry: {
