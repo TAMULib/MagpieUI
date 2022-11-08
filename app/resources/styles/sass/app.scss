@@ -327,6 +327,12 @@ content-viewer {
 .btn-group-vertical>.btn:hover,
 .btn-group>.btn.active,
 .btn-group>.btn:focus,
-.btn-group>.btn:hover {
+.btn-group>.btn:hover,
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
   z-index: 0;
 }
